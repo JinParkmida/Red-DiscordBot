@@ -1,134 +1,100 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/Cog-Creators/Red-DiscordBot/tree/V3/develop"><img src="https://imgur.com/pY1WUFX.png" alt="Red - Discord Bot"></a>
-  <br>
-  Red Discord Bot
-  <br>
-</h1>
+# Red Discord Bot
 
-<h4 align="center">Music, Moderation, Trivia, Stream Alerts and Fully Modular.</h4>
+A highly customizable, modular, and self-hosted Discord bot for your server.
 
-<p align="center">
-  <a href="https://discord.gg/red">
-    <img src="https://discordapp.com/api/guilds/133049272517001216/widget.png?style=shield" alt="Discord Server">
-  </a>
-  <a href="https://pypi.org/project/Red-DiscordBot/">
-     <img alt="PyPI" src="https://img.shields.io/pypi/v/Red-Discordbot">
-  </a>
-  <a href="https://www.python.org/downloads/">
-    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/Red-Discordbot">
-  </a>
-  <a href="https://github.com/Rapptz/discord.py/">
-     <img src="https://img.shields.io/badge/discord-py-blue.svg" alt="discord.py">
-  </a>
-  <a href="https://www.patreon.com/Red_Devs">
-    <img src="https://img.shields.io/badge/Support-Red!-red.svg" alt="Support Red on Patreon!">
-  </a>
-</p>
-<p align="center">
-  <a href="https://github.com/Cog-Creators/Red-DiscordBot/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/Cog-Creators/Red-Discordbot/tests.yml?label=tests" alt="GitHub Actions">
-  </a>
-  <a href="http://docs.discord.red/en/stable/?badge=stable">
-    <img src="https://readthedocs.org/projects/red-discordbot/badge/?version=stable" alt="Red on readthedocs.org">
-  </a>
-  <a href="https://github.com/psf/black">
-    <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
-  </a>
-  <a href="http://makeapullrequest.com">
-    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
-  </a>
-  <a href="https://crowdin.com/project/red-discordbot">
-    <img src="https://d322cqt584bo4o.cloudfront.net/red-discordbot/localized.svg" alt="Localized with Crowdin">
-  </a>
-</p>
+---
 
-<p align="center">
-  <a href="#overview">Overview</a>
-  •
-  <a href="#installation">Installation</a>
-  •
-  <a href="http://docs.discord.red/en/stable/index.html">Documentation</a>
-  •
-  <a href="#plugins">Plugins</a>
-  •
-  <a href="#join-the-community">Community</a>
-  •
-  <a href="#license">License</a>
-</p>
+**Developer:** Jin Park
 
-# Overview
+---
 
-Red is a fully modular bot – meaning all features and commands can be enabled/disabled to your
-liking, making it completely customizable. This is a *self-hosted bot* – meaning you will need
-to host and maintain your own instance. You can turn Red into an admin bot, music bot, trivia bot,
-new best friend or all of these together!  
+## Overview
 
-[Installation](#installation) is easy, and you do **NOT** need to know anything about coding! Aside
-from installing and updating, every part of the bot can be controlled from within Discord.
+Red Discord Bot is a fully modular bot, meaning all features and commands can be enabled or disabled to your liking, making it completely customizable. You host and maintain your own instance, giving you full control over your bot's features and data.
 
-**The default set of modules includes and is not limited to:**
+**Key Features:**
 
-- Moderation features (kick/ban/softban/hackban, mod-log, filter, chat cleanup)
-- Trivia (lists are included and can be easily added)
-- Music features (YouTube, SoundCloud, local files, playlists, queues)
-- Stream alerts (Twitch, Youtube, Picarto)
-- Bank (slot machine, user credits)
-- Custom commands
-- Imgur/gif search
-- Admin automation (self-role assignment, cross-server announcements, mod-mail reports)
-- Customisable command permissions
+- **Moderation:** Kick, ban, softban, hackban, mod-log, filter, chat cleanup, warnings, mutes, permissions, and more.
+- **Audio:** Music playback from YouTube, SoundCloud, local files, playlists, and queues. Includes equalizer and advanced audio controls.
+- **Custom Commands:** Create your own commands and aliases for your server.
+- **Image & Media:** Image manipulation and fun image commands.
+- **Downloader:** Install and manage third-party cogs (plugins) directly from Discord.
+- **Admin Tools:** Announcements, admin utilities, and automation.
+- **Streams & Reports:** Stream alerts, reporting tools, and more.
+- **Memory Palace:**
+    - Persistent, visual memory spaces for your server.
+    - Organize messages, files, and memories into themed rooms and sub-rooms.
+    - ASCII map navigation, context menu support, smart suggestions, and robust management tools.
+    - Overlapping perspectives: multiple users can place the same message in different rooms with their own context.
+    - All data is stored locally for privacy and control.
 
-**Additionally, other [plugins](#plugins) (cogs) can be easily found and added from our growing
-community of cog repositories.**
+**Extensible:**
+- Easily add or remove features by loading or unloading cogs.
+- Install third-party cogs for even more functionality.
 
-# Installation
+---
 
-**The following platforms are officially supported:** 
+## Installation
 
-- [Windows](https://docs.discord.red/en/stable/install_guides/windows.html)
-- [MacOS](https://docs.discord.red/en/stable/install_guides/mac.html)
-- [Most major linux distributions](https://docs.discord.red/en/stable/install_guides/index.html)
+Red Discord Bot is supported on:
+- **Windows**
+- **MacOS**
+- **Most major Linux distributions**
 
-If after reading the guide you are still experiencing issues, feel free to join the
-[Official Discord Server](https://discord.gg/red) and ask in the **#support** channel for help.
+### Quick Start
 
-# Plugins
+1. **Install Python 3.8–3.11** and [git](https://git-scm.com/).
+2. **Create a virtual environment** (recommended):
+   ```bash
+   python -m venv redenv
+   source redenv/bin/activate  # On Windows: redenv\Scripts\activate
+   ```
+3. **Install Red Discord Bot:**
+   ```bash
+   python -m pip install -U pip wheel
+   python -m pip install -U Red-DiscordBot
+   ```
+4. **Set up your instance:**
+   ```bash
+   redbot-setup
+   ```
+   Follow the prompts to configure your data location, backend, and instance name.
+5. **Run the bot:**
+   ```bash
+   redbot <your instance name>
+   ```
+   The bot will walk you through the initial setup, including your Discord bot token and prefix.
 
-Red is fully modular, allowing you to load and unload plugins of your choice, and install 3rd party
-plugins directly from Discord! A few examples are:
+For detailed platform-specific instructions, see the [docs](https://docs.discord.red/en/stable/install_guides/).
 
-- Cleverbot integration (talk to Red and she talks back)
-- Ban sync
-- Welcome messages
-- Casino
-- Reaction roles
-- Slow Mode
-- AniList
-- And much, much more!
+---
 
-Feel free to take a [peek](https://index.discord.red) at a list of
-available 3rd party cogs!
+## Usage & Features
 
-# Join the community!
+- All features are modular and can be enabled/disabled as needed.
+- Use `[p]help` (replace `[p]` with your prefix) in Discord to see all available commands.
+- The Memory Palace feature provides `/palace`, `/place`, `/enter`, `/memory`, `/addroom`, `/movememory`, `/renamememory`, `/deletememory`, `/renameroom`, `/deleteroom`, and `/memorypalacehelp` commands, as well as right-click context menu support.
 
-**Red** is in continuous development, and it’s supported by an active community which produces new
-content (cogs/plugins) for everyone to enjoy. New features are constantly added. If you can’t
-[find](https://index.discord.red) the cog you’re looking for,
-consult our [guide](https://docs.discord.red/en/stable/guide_cog_creation.html) on
-building your own cogs!
+---
 
-Join us on our [Official Discord Server](https://discord.gg/red)!
+## Extending Red
 
-# License
+- Red supports third-party cogs (plugins) for additional features.
+- Use the Downloader cog to install and manage cogs directly from Discord.
+- See the [official documentation](https://docs.discord.red/en/stable/guide_cog_creation.html) for creating your own cogs.
 
-Released under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html) license.
+---
 
-Red is named after the main character of "Transistor", a video game by
-[Super Giant Games](https://www.supergiantgames.com/games/transistor/).
+## License
 
-Artwork created by [Sinlaire](https://sinlaire.deviantart.com/) on Deviant Art for the Red Discord
-Bot Project.
+This project is licensed under the [GNU GPL v3](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
-This project vendors [discord.ext.menus](https://github.com/Rapptz/discord-ext-menus) package made by Danny Y. (Rapptz) which is distributed under MIT License.
-A copy of this license can be found in the [discord-ext-menus.LICENSE](redbot/vendored/discord-ext-menus.LICENSE) file in the [redbot/vendored](redbot/vendored) folder of this repository.
+---
+
+## Credits
+
+Developed and maintained by Jin Park.
+
+Red Discord Bot is inspired by the open-source community and is not affiliated with Discord Inc.
+
+---
